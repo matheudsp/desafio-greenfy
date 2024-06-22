@@ -9,7 +9,7 @@ import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
   imports: [
     TypeOrmModule.forFeature([Task]),
     JwtModule.register({
-      secret: 'secretTest', // Your JWT secret key
+      secret: process.env.JWT_SECRET, // Your JWT secret key
       signOptions: { expiresIn: '30d' }, // Token expiration
     }),
   ],

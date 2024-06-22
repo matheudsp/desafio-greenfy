@@ -39,9 +39,9 @@ export class AuthService {
     }
   }
 
-  async register(createUserDto: CreateUserDto) {
-    const user = await this.usersService.create(createUserDto);
+  // async register(createUserDto: CreateUserDto) {
+  //   const user = await this.usersService.create(createUserDto);
 
-    return user
-  }
+  //   return user
+  // }
 }

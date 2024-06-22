@@ -3,8 +3,9 @@ import { UsersService } from './users.service';
 import { AuthService } from '../auth/auth.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
+import { ApiTags } from '@nestjs/swagger';
 
-
+@ApiTags('users')
 @Controller('users')
 export class UsersController {
   constructor(
@@ -18,8 +19,8 @@ export class UsersController {
     return this.usersService.create(createUserDto);
   }
 
-  @Post('login')
-  async login(@Body() loginUserDto: LoginUserDto) {
-    return this.authService.login(loginUserDto);
-  }
+  // @Post('login')
+  // async login(@Body() loginUserDto: LoginUserDto) {
+  //   return this.authService.login(loginUserDto);
+  // }
 }
